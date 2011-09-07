@@ -10,7 +10,7 @@ PPT.AddTitleSlide(ppt, title = NULL, subtitle = NULL, title.font = NULL, title.f
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-\item{ppt}{Required list of objects of class 'COMobject' as initialised by PPT.Init. See example.}
+\item{ppt}{Required list of COM objects as initialised by PPT.Init. See example.}
 \item{title}{Optional title text.}
 \item{subtitle}{Optional subtitle text.}
 \item{title.font}{Optional character title font.}
@@ -22,23 +22,28 @@ PPT.AddTitleSlide(ppt, title = NULL, subtitle = NULL, title.font = NULL, title.f
 %\details{}
 \value{
 
-  \item{ppt }{Invisibly returns an updated list of objects of class 'COMobject'.}
+  \item{ppt}{Invisibly returns a list of COM objects. 
+%of class 'COMobject'.
+}
   
 }
 \references{ 
-See \url{ http://sunsite.univie.ac.at/rcom} for more details on rcom.
-
+See \url{ http://sunsite.univie.ac.at/rcom} for more details on rcom and \url{http://www.omegahat.org/RDCOMClient/} for more details on RDCOMClient.
 }
-\author{ Wayne Jones \email{wayne_betws@hotmail.com}}
-\section{Warning}{You must update the list of ComObjects initialised with PPT.Init when you call this function. See the example. }
+
+\author{ Wayne Jones \email{'wayne_betws@hotmail.com'}}
+\section{Warning}{You must save the returned list of COM objects initialised with PPT.Init to an R object. See the example. }
 %\note{}
-\seealso{\code{\link{PPT.Init}},\code{\link{PPT.AddTitleSlide}},\code{\link{PPT.AddTextSlide}},\code{\link{PPT.AddTitleOnlySlide}},\code{\link{PPT.Present}},\code{\link{PPT.ApplyTemplate}},\code{\link{PPT.AddGraphicstoSlide}}}
+\seealso{\code{\link{PPT.Init}},\code{\link{PPT.AddTitleSlide}},\code{\link{PPT.AddTextSlide}},\cr
+\code{\link{PPT.AddTitleOnlySlide}},\code{\link{PPT.Present}},\code{\link{PPT.ApplyTemplate}},\code{\link{PPT.AddGraphicstoSlide}}}
 
 
 \examples{
 
 \dontrun{
-myPres<-PPT.Init(visible=TRUE)
+myPres<-PPT.Init() 
+#or 
+#myPres<-PPT.Init(method="RDCOMClient")
 myPres<-PPT.AddBlankSlide(myPres)
 myPres<-PPT.AddTitleSlide(myPres,title="Title Slide",subtitle="Subtitle here")
 myPres<-PPT.AddTitleOnlySlide(myPres,title="Title Only",title.fontsize=40,title.font="Arial")
@@ -49,3 +54,6 @@ rm(myPres)
 }
 \keyword{IO}
 \keyword{connection}
+
+
+
