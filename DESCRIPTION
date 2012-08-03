@@ -4,15 +4,16 @@ Title: Simple R Interface to Microsoft PowerPoint using rcom or
         RDCOMClient.
 Depends: R (>= 2.3.0)
 Suggests: rcom, RDCOMClient
-Version: 2.0
-Date: 2011-09-07
+Version: 2.1
+Date: 2012-08-03
 Author: Wayne Jones
 Maintainer: Wayne Jones <wayne_betws@hotmail.com>
-Description: R2PPT provides a simple set of wrappers to easliy use rcom
+Description: R2PPT provides a simple set of wrappers to easily use rcom
         or RDCOMClient for generating Microsoft PowerPoint
         presentations.
 License: GPL (>= 2)
-Packaged: Thu Sep 8 11:52:16 2011; Wayne.W.Jones
+Packaged: 2012-08-03 11:44:08 UTC; Wayne
+X-CRAN-Original-Package: R2PPT
 OS_type: windows
 Repository: CRAN
-Date/Publication: 2011-09-09 13:08:14
+Date/Publication: 2012-08-04 07:36:01
